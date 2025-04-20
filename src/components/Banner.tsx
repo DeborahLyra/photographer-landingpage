@@ -23,17 +23,13 @@ export function Banner() {
                 </motion.h1>
             </div>
 
-            <div className="w-full relative">
+            <div className="w-full">
                 <img 
                 src={image} 
                 alt="cidade de olinda e idoso" 
                 className="w-full h-[550px]"
                 onContextMenu={handleContextMenu} 
                  />
-
-                <div className="absolute bottom-2 right-2 text-white text-sm opacity-50 pointer-events-none select-none">
-                    © Marcus Prado
-                </div>
             </div>
         </>
     );
