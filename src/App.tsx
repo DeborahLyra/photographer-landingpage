@@ -1,3 +1,4 @@
+import { AboutMe } from "./components/AboutMe"
 import { Banner } from "./components/Banner"
 import { Navbar } from "./components/Navbar"
 
@@ -9,6 +10,7 @@ function App() {
     <>
    <Navbar/>
    <Banner/>
+   <AboutMe/>
     </>
   )
 }
