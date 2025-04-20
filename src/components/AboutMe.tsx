@@ -9,7 +9,7 @@ export function AboutMe() {
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
     return (
-        <div className="px-8 py-10 md:px-16 font-serif" id='aboutMe' ref={ref}>
+        <div className="px-8 py-20 bg-white" id='aboutMe' ref={ref}>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -22,12 +22,12 @@ export function AboutMe() {
                 <div className="w-24 h-1 bg-black mx-auto"></div>
             </motion.div>
 
-            <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="font-serif text-justify text-base md:text-lg font-light max-w-xl"
+                    className="font-serif text-lg text-justify md:text-xl font-light max-w-2xl tracking-wide"
                 >
                     {t('aboutMe.text')
                         .split('\n\n')

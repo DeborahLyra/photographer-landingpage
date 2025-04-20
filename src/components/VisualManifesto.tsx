@@ -39,14 +39,14 @@ export function ArtisticManifesto() {
               initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.1 * idx }}
-              className={`font-serif text-lg text-justify md:text-xl mb-6 ${
+              className={`font-serif text-lg text-justify md:text-xl mb-6 tracking-wide ${
                 paragraph.startsWith("NA FOTOGRAFIA") || 
                 paragraph.startsWith("INSPIRO-ME") || 
                 paragraph.startsWith("MINHA PAISAGEM") || 
                 paragraph.startsWith("PROCURO DAR") || 
                 paragraph.startsWith("FAÇO VALER") ? 
-                "font-light uppercase tracking-wider" : 
-                "font-normal"
+                "font-medium " : 
+                "font-light"
               }`}
             >
               {paragraph}
