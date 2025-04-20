@@ -1,9 +1,12 @@
 {
-    "navbar.about": "About Me",
-    "navbar.exp": "About the Works",
-    "navbar.proj": "Gallery",
-    "navbar.con": "Contact",
-    "aboutMe.title": "About Me",
-    "aboutMe.text": "Professional journalist, specialized in Culture, Historical Heritage, and the Arts.\n\nEditor of the Literary Supplement of DIÁRIO DE PERNAMBUCO, literary columnist and cultural contributor for the Diário de Pernambuco for 25 years.\n\nParticipated in the organizing and executive committee of the First Brazilian Seminar on Literary Criticism and Theory at UFPE (1973).\n\nAmong the honors received, stands out the one awarded by the President of the Republic of Portugal, Mário Soares: Commendation and Cultural Merit Diploma.\n\nAs a photographer, carried out photo essays in partnership with the painter João Câmara (Cities: Two).\n\nFinalist of the 48th edition of the Jabuti Award with the book/album 'Flores Tropicais', Brazil’s most prestigious literary prize, published by Embrapa/Brasília.\n\nHeld solo exhibitions at the University of Clermont-Ferrand (France), Galeria Contigo (São Paulo), Museum of Contemporary Art (Olinda), Portuguese Reading Cabinet, and Joaquim Nabuco Foundation."
-  }
+  "navbar.about": "About Me",
+  "navbar.exp": "About the Works",
+  "navbar.proj": "Gallery",
+  "navbar.con": "Contact",
+  "aboutMe.title": "About Me",
+  "aboutMe.text": "Professional journalist specialized in Culture, Historical Heritage and Arts.\n\nEditor of the Literary Supplement of DIÁRIO DE PERNAMBUCO, literary columnist and cultural writer for Diário de Pernambuco for 25 years.\n\nMember of the organizing and executive committee of the I BRAZILIAN SEMINAR OF LITERARY CRITICISM AND THEORY at UFPE (1973).\n\nAmong the honors received, highlights include the one granted by the President of Portugal, Mário Soares: Commendation and Diploma of Cultural Merit.\n\nAs a photographer, conducted projects in partnership with painter João Câmara (Cities: Two).\n\nFinalist of the 48th Jabuti Award with the book/album 'Tropical Flowers', Brazil's most prestigious literary award, published by Embrapa/Brasília.\n\nHeld solo exhibitions at Clermont-Ferrand University (France), Contigo Gallery (São Paulo), Museum of Contemporary Art (Olinda), Portuguese Reading Office and Joaquim Nabuco Foundation.",
   
+  "artisticManifesto.title": "Photographic Manifesto",
+  "artisticManifesto.text": "IN PHOTOGRAPHY, I desire to maintain the illusory character of the image through fragments, not the representation of reality.\n\nI DRAW INSPIRATION FROM KAFKA, Marcel Proust, Charles Baudelaire, Machado de Assis, Euclides da Cunha (who perhaps never photographed), for whom detail was fundamental. I refer not to the so-called 'morbid details' that permeate certain literary works, but to inspirations of other creative essences and images unseen before me.\n\nMY LANDSCAPE WILL NOT BE A POSTCARD, it will be easily identified by its angles, by my intimate way of looking and seeing, by the tonality of colors, in search of a style uniquely my own.\n\nI SEEK TO GIVE THE PHOTOGRAPHIC ACT the ritualistic importance of a work of art and its subjective possibilities.\n\nI STAND BY MY work philosophy when it comes to exclusivity. In dealings with collectors and Art Galleries, I certify that my photography is unique, there is no copy, it is unrepeatable.",
+  "artisticManifesto.signature": "Marcus Prado"
+}

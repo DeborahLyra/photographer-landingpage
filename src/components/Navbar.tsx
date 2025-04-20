@@ -18,7 +18,7 @@ export function Navbar() {
   const { t } = useTranslation();
 
   return (
-    <header className="bg-white border-b-2 border-black">
+    <header className="bg-[#f5f1e6] border-b-2 border-black ">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">

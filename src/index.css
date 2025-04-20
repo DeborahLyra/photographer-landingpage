@@ -9,6 +9,11 @@
   }
 }
 
+@font-face {
+  font-family: 'YourCustomSerifFont';
+  src: url('/fonts/your-font.woff2') format('woff2');
+}
+
 
 * {
   font-size: 1em;
