@@ -5,7 +5,7 @@ export function AboutMe() {
   const { t } = useTranslation();
 
   return (
-    <div className="px-8 py-10 md:px-16">
+    <div className="px-8 py-10 md:px-16" id='aboutMe'>
       <h2 className="font-bold mb-8 text-3xl md:text-5xl text-center">{t('aboutMe.title')}</h2>
 
       <div className="flex flex-col-reverse md:flex-row items-center justify-between">

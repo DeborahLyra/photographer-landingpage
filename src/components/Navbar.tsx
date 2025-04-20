@@ -43,16 +43,16 @@ export function Navbar() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#about" className="text-md font-light text-gray-900 hover:text-white transition-colors">
+          <a href="#aboutMe" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.about')}
           </a>
-          <a href="#experience" className="text-md font-light text-gray-900 hover:text-white transition-colors">
+          <a href="#experience" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.exp')}
           </a>
-          <a href="#projects" className="text-md font-light text-gray-900 hover:text-white transition-colors">
+          <a href="#projects" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.proj')}
           </a>
-          <a href="#contact" className="text-md font-light text-gray-900 hover:text-white transition-colors">
+          <a href="#contact" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.con')}
           </a>
 
@@ -97,26 +97,26 @@ export function Navbar() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 ">
                 <a
-                  href="#about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-400"
+                  href="#aboutMe"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
                 >
                   {t('navbar.about')}
                 </a>
                 <a
                   href="#experience"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-400"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
                 >
                   {t('navbar.exp')}
                 </a>
                 <a
                   href="#projects"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-white"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
                 >
                   {t('navbar.proj')}
                 </a>
                 <a
                   href="#contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-white"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
                 >
                   {t('navbar.con')}
                 </a>
