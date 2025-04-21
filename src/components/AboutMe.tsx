@@ -12,7 +12,7 @@ export function AboutMe() {
         <div className="px-8 py-20 bg-white" id='aboutMe' ref={ref}>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
