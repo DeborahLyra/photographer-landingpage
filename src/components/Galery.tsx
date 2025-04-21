@@ -70,7 +70,7 @@ export function Galery() {
                     {t('galery.title') || "Galeria"}
                 </h2>
                 <div className="w-24 h-1 bg-black mx-auto"></div>
-                <p className="font-serif mt-8 text-lg">Clique nas imagens para ter acesso a galeria de fotos</p>
+                <p className="font-serif mt-8 text-lg">{t('galery.subtitle')}</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">

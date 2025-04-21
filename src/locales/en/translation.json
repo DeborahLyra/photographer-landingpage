@@ -1,6 +1,6 @@
 {
   "navbar.about": "About Me",
-  "navbar.exp": "About the Works",
+  "navbar.exp": "Photographic Manifesto",
   "navbar.proj": "Gallery",
   "navbar.con": "Contact",
   "aboutMe.title": "About Me",
@@ -10,5 +10,6 @@
   "artisticManifesto.text": "IN PHOTOGRAPHY, I desire to maintain the illusory character of the image through fragments, not the representation of reality.\n\nI DRAW INSPIRATION FROM KAFKA, Marcel Proust, Charles Baudelaire, Machado de Assis, Euclides da Cunha (who perhaps never photographed), for whom detail was fundamental. I refer not to the so-called 'morbid details' that permeate certain literary works, but to inspirations of other creative essences and images unseen before me.\n\nMY LANDSCAPE WILL NOT BE A POSTCARD, it will be easily identified by its angles, by my intimate way of looking and seeing, by the tonality of colors, in search of a style uniquely my own.\n\nI SEEK TO GIVE THE PHOTOGRAPHIC ACT the ritualistic importance of a work of art and its subjective possibilities.\n\nI STAND BY MY work philosophy when it comes to exclusivity. In dealings with collectors and Art Galleries, I certify that my photography is unique, there is no copy, it is unrepeatable.",
   "artisticManifesto.signature": "Marcus Prado",
 
-  "galery.title": "Galery"
+  "galery.title": "Galery",
+  "galery.subtitle": "Click on the images to explore each collection"
 }
