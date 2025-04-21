@@ -20,7 +20,7 @@ export function Galery() {
 
     const { t } = useTranslation();
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     const titles = ['Paisagens', 'Arte', 'Mosaico']
 
@@ -60,18 +60,19 @@ export function Galery() {
     if (loading) return <p>Carregando...</p>
 
     return (
-        <div 
-        ref={ref}
-        className="min-h-screen py-20 px-8 md:px-16">
+        <div
+            ref={ref}
+            className="min-h-screen py-20 px-8 md:px-16">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
-                <h2 className="font-serif text-4xl md:text-6xl mb-4">
+                <h2 className="font-serif text-4xl md:text-6xl mb-4 text-black">
                     {t('galery.title')}
                 </h2>
+
                 <div className="w-24 h-1 bg-black mx-auto"></div>
                 <p className="font-serif mt-8 text-lg">Clique nas imagens para ter acesso a galeria de fotos</p>
             </motion.div>

@@ -6,7 +6,7 @@ import { useRef } from 'react';
 export function AboutMe() {
     const { t } = useTranslation();
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     return (
         <div className="px-8 py-20 bg-white" id='aboutMe' ref={ref}>

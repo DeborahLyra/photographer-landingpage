@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 export function ArtisticManifesto() {
   const { t } = useTranslation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <div 
