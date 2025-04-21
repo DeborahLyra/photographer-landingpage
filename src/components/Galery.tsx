@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { supabase } from '../../supabaseClient'
 import { ImageEvent } from '../types'
 import { motion } from 'framer-motion'
