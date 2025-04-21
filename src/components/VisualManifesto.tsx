@@ -29,7 +29,7 @@ export function ArtisticManifesto() {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1, delay: 0.3 }}
-        className="max-w-4xl mx-auto"
+        className="max-w-4xl mx-auto px-8"
       >
         {t('artisticManifesto.text')
           .split('\n\n')

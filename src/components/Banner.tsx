@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import image from '../../public/imgs/bannerImg.jpeg'
-
-interface ImageEvent extends React.MouseEvent<HTMLImageElement> {
-    preventDefault: () => void;
-}
+import { ImageEvent } from "../types";
 
 export function Banner() {
     const handleContextMenu = (e: ImageEvent) => {

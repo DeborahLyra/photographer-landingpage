@@ -1,19 +1,11 @@
-import { AboutMe } from "./components/AboutMe"
-import { Banner } from "./components/Banner"
-import { Navbar } from "./components/Navbar"
-import { ArtisticManifesto } from "./components/VisualManifesto"
+import { Router } from "./Router"
 
 
 
 function App() {
 
   return (
-    <>
-   <Navbar/>
-   <Banner/>
-   <AboutMe/>
-   <ArtisticManifesto/>
-    </>
+    <Router />
   )
 }
 
