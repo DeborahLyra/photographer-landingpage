@@ -19,7 +19,7 @@ export function Galery() {
     const navigate = useNavigate()
     const { t } = useTranslation()
 
-    const titles = ['Paisagens', 'Arte', 'Mosaico']
+    const titles = ['Arte','Mosaico','Paisagem','Urbano']
 
     const handleContextMenu = (e: ImageEvent) => {
         e.preventDefault()
@@ -30,8 +30,8 @@ export function Galery() {
             const { data, error } = await supabase
                 .from('galery')
                 .select('*')
-                .in('id', ['88bf2d81-2706-4772-b048-52b27df3f5e5', '148f994a-511f-4b96-858c-790c8b2c10bc', '68dbc7e8-e2ea-4547-8f89-9e57bf08286f'])
-                .order('id', { ascending: false })
+                .in('id', ['88bf2d81-2706-4772-b048-52b27df3f5e5', '148f994a-511f-4b96-858c-790c8b2c10bc', '68dbc7e8-e2ea-4547-8f89-9e57bf08286f', 'bf7a61c5-0de6-4891-90ea-6ff15273aa23'])
+                .order('description', { ascending: true })
 
             if (error) {
                 console.error('Erro ao buscar galeria:', error.message)
@@ -45,10 +45,10 @@ export function Galery() {
     }, [])
 
     const handleClickByIndex = (index: number) => {
-        const paths = ['paisagens', 'arte', 'mosaicos']
+        const paths = ['arte', 'mosaico','paisagem', 'urbano']
         const selectedPath = paths[index]
         if (selectedPath) {
-            navigate(`/galery/${selectedPath}`)
+            navigate(`/${selectedPath}`)
         }
     }
 
@@ -73,7 +73,7 @@ export function Galery() {
                 <p className="font-serif mt-8 text-lg">{t('galery.subtitle')}</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-4 p-4">
                 {items.map((item, index) => (
                     <motion.div 
                         key={item.id}
