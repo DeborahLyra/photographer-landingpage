@@ -4,12 +4,19 @@
   "navbar.proj": "Galeria",
   "navbar.con": "Contato",
   "aboutMe.title": "Sobre Mim",
-  "aboutMe.text": "Jornalista profissional, especializado em Cultura, Patrimônio Histórico e Artes.\n\nEditor do Suplemento Literário do DIÁRIO DE PERNAMBUCO, colunista literário e articulista cultural do Diário de Pernambuco, durante 25 anos.\n\nIntegrou a comissão organizadora e executiva do I SEMINÁRIO BRASILEIRO DE CRÍTICA e TEORIA DA LITERATURA, da UFPE (1973).\n\nEntre as honrarias recebidas, destaca a que lhe foi concedida pelo presidente da República de Portugal, Mário Soares: Comenda e Diploma do Mérito Cultural.\n\nComo fotógrafo, realizou ensaios em parceria com o pintor João Câmara (Cidades: Duas).\n\nFinalista da 48ª edição do Prêmio Jabuti com o livro/Álbum 'Flores Tropicais', a maior premiação literária do Brasil, publicado pela Embrapa/Brasília.\n\nRealizou exposições individuais na Universidade Clermont-Ferrand (França), na Galeria Contigo (São Paulo), no Museu de Arte Contemporânea (Olinda), no Gabinete Português de Leitura e na Fundação Joaquim Nabuco.",
-  
+  "aboutMe.text": "Jornalista profissional, especializado em Cultura, Patrimônio Histórico, Fotografia.\nCoeditor do Suplemento Literário do DIÁRIO DE PERNAMBUCO, colunista literário (1962-1998), atualmente é articulista desse Jornal.\nEntre as honrarias recebidas, destaca a que lhe foi concedida pelo presidente da República de Portugal, Mário Soares. Comenda e Diploma do Mérito Cultural.\nFinalista da 48ª edição do Prêmio Jabuti, gênero Fotografia, com o livro/Álbum “Flores Tropicais”, publicado pela Embrapa/Brasília (2005).\nRealizou exposições individuais na Universidade Clermont-Ferrand, (França), na Galeria Contigo (São Paulo), no Museu de Arte Contemporânea (Olinda), no Gabinete Português de Leitura (Recife), na Fundação Joaquim Nabuco. (Recife).",
+
   "artisticManifesto.title": "Manifesto Fotográfico",
   "artisticManifesto.text": "NA FOTOGRAFIA, tenho o desejo de manter o caráter ilusório da imagem a partir de fragmentos, e não a representação da realidade.\n\nINSPIRO-ME EM KAFKA, Marcel Proust, Charles Baudelaire, Machado de Assis, Euclides da Cunha, (eles talvez nunca fotografaram), para os quais o detalhe era fundamental. Refiro-me não aos chamados 'detalhes doentios' que permeiam certas obras literárias, mas aos inspiradores de outras essências criativas e imagens não vistas antes de mim.\n\nMINHA PAISAGEM NÃO SERÁ UM CARTÃO-POSTAL, será identificada facilmente pelas angulações, pelo meu jeito íntimo de olhar e ver, pela tonalidade das cores, em busca de um estilo só meu.\n\nPROCURO DAR AO ATO FOTOGRÁFICO a importância ritualística da obra de arte e suas possibilidades subjetivas.\n\nFAÇO VALER A MINHA filosofia de trabalho quando se tratar de exclusividade. Nos tratos com colecionadores e Galerias de Arte dou o certificado de que a minha fotografia é única, não existe cópia, é irrepetida.",
   "artisticManifesto.signature": "Marcus Prado",
 
   "galery.title": "Galeria",
-  "galery.subtitle": "Explore cada coleção clicando nas imagens"
+  "galery.subtitle": "Explore cada coleção clicando nas imagens",
+  
+  "contact.title": "Contato",
+  "contact.subtitle": "Entre em contato para solicitar orçamento de fotografias impressas e emolduradas, com exclusividade e autenticidade garantidas.",
+  "contact.whatsapp": "Entre em contato pelo WhatsApp",
+  "contact.email": "Entre em contato por email",
+  "contact.instagram": "Me siga no Instagram!"
+
 }
