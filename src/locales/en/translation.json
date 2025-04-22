@@ -17,6 +17,12 @@
   "contact.subtitle": "Get in touch to request a quote for printed and framed photographs, with guaranteed exclusivity and authenticity.",
   "contact.whatsapp": "Contact via WhatsApp",
   "contact.email": "Contact via email",
-  "contact.instagram": "Follow me on Instagram!"
+  "contact.instagram": "Follow me on Instagram!",
+  
+  "footer": {
+    "title": "Let's Connect",
+    "subtitle": "For collaborations, exhibitions or any inquiries about my work.",
+    "rights": "All rights reserved."
+  }
 
 }

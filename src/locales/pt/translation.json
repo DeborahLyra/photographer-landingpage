@@ -17,6 +17,12 @@
   "contact.subtitle": "Entre em contato para solicitar orçamento de fotografias impressas e emolduradas, com exclusividade e autenticidade garantidas.",
   "contact.whatsapp": "Entre em contato pelo WhatsApp",
   "contact.email": "Entre em contato por email",
-  "contact.instagram": "Me siga no Instagram!"
+  "contact.instagram": "Me siga no Instagram!",
+
+  "footer": {
+    "title": "Vamos Conectar",
+    "subtitle": "Para colaborações, exposições ou qualquer informação sobre meu trabalho.",
+    "rights": "Todos os direitos reservados."
+  }
 
 }
