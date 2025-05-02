@@ -5,6 +5,7 @@ import { GaleryItem, ImageEvent } from '../types';
 import { Navbar } from '../components/Navbar';
 import { motion } from 'framer-motion';;
 import { useTranslation } from 'react-i18next';
+import { Footer } from '../components/Footer';
 
 
 export function GaleryPage() {
@@ -83,7 +84,7 @@ export function GaleryPage() {
 
             </main>
 
-
+            <Footer />
         </div>
     )
 }
