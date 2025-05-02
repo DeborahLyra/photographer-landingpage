@@ -73,7 +73,7 @@ export function GaleryPage() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-full h-56 object-cover rounded"
+                                className="w-full h-64 object-cover rounded"
                                 onContextMenu={handleContextMenu}
                             />
 
