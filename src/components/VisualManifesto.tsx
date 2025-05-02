@@ -12,6 +12,7 @@ export function ArtisticManifesto() {
     <div 
       ref={ref}
       className="min-h-screen bg-[#f5f1e6] py-20 px-4 md:px-16"
+      id="manifesto"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}

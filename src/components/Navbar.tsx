@@ -1,27 +1,34 @@
 'use client'
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react'
+import { useState } from 'react';
 import {
   Dialog,
   DialogPanel,
   PopoverGroup,
-} from '@headlessui/react'
+} from '@headlessui/react';
 import {
   Bars3Icon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import logo from "../../public/imgs/logoMarcus.png"
+} from '@heroicons/react/24/outline';
+import logo from "../../public/imgs/logoMarcus.png";
+import { useNavigate } from 'react-router-dom';
 
 export function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { i18n } = useTranslation();
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleNavigate = (section: string) => {
+    setMobileMenuOpen(false);
+    navigate('/', { state: { scrollTo: section } });
+  };
 
   return (
-    <header className="bg-[#f5f1e6] border-b-2 border-black ">
+    <header className="bg-[#f5f1e6] border-b-2 border-black">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a onClick={() => handleNavigate('')} className="-m-1.5 p-1.5 cursor-pointer">
             <span className="sr-only">Marcus</span>
             <img
               src={logo}
@@ -43,16 +50,16 @@ export function Navbar() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#aboutMe" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
+          <a onClick={() => handleNavigate('aboutMe')} className="cursor-pointer text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.about')}
           </a>
-          <a href="#experience" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
+          <a onClick={() => handleNavigate('manifesto')} className="cursor-pointer text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.exp')}
           </a>
-          <a href="#projects" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
+          <a onClick={() => handleNavigate('projects')} className="cursor-pointer text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.proj')}
           </a>
-          <a href="#contact" className="text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
+          <a onClick={() => handleNavigate('contact')} className="cursor-pointer text-md font-light text-gray-900 hover:text-gray-500 transition-colors">
             {t('navbar.con')}
           </a>
 
@@ -60,8 +67,8 @@ export function Navbar() {
             <button
               onClick={() => i18n.changeLanguage('pt')}
               className={`text-sm px-3 py-1 rounded-full transition-all border-2 shadow-md ${i18n.language === 'pt'
-                  ? 'bg-black text-white'
-                  : 'bg-white/10 text-black border-black'
+                ? 'bg-black text-white'
+                : 'bg-white/10 text-black border-black'
                 }`}
             >
               Português
@@ -69,14 +76,13 @@ export function Navbar() {
             <button
               onClick={() => i18n.changeLanguage('en')}
               className={`text-sm px-3 py-1 rounded-full transition-all border-2 shadow-md ${i18n.language === 'en'
-                  ? 'bg-black text-white'
-                  : 'bg-white/10 text-black border-black'
+                ? 'bg-black text-white'
+                : 'bg-white/10 text-black border-black'
                 }`}
             >
               English
             </button>
           </div>
-
         </PopoverGroup>
       </nav>
 
@@ -95,28 +101,28 @@ export function Navbar() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6 ">
+              <div className="space-y-2 py-6">
                 <a
-                  href="#aboutMe"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
+                  onClick={() => handleNavigate('aboutMe')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500 cursor-pointer"
                 >
                   {t('navbar.about')}
                 </a>
                 <a
-                  href="#experience"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
+                  onClick={() => handleNavigate('manifesto')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500 cursor-pointer"
                 >
                   {t('navbar.exp')}
                 </a>
                 <a
-                  href="#projects"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
+                  onClick={() => handleNavigate('projects')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500 cursor-pointer"
                 >
                   {t('navbar.proj')}
                 </a>
                 <a
-                  href="#contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500"
+                  onClick={() => handleNavigate('contact')}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-light text-gray-900 hover:bg-white/20 hover:text-gray-500 cursor-pointer"
                 >
                   {t('navbar.con')}
                 </a>
@@ -138,7 +144,7 @@ export function Navbar() {
                     }}
                     className={`w-full text-center px-3 py-2 rounded-lg ${i18n.language === 'en' ? 'bg-black text-white' : 'text-gray-900 hover:bg-white/20 hover:text-white'}`}
                   >
-                   English
+                    English
                   </button>
                 </div>
               </div>
@@ -147,5 +153,5 @@ export function Navbar() {
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }

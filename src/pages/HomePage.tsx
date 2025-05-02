@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AboutMe } from "../components/AboutMe";
 import { Banner } from "../components/Banner";
 import { Contact } from "../components/Contact";
@@ -5,9 +6,24 @@ import { Footer } from "../components/Footer";
 import { Galery } from "../components/Galery";
 import { Navbar } from "../components/Navbar";
 import { ArtisticManifesto } from "../components/VisualManifesto";
+import { useLocation } from "react-router-dom";
 
 
 export function HomePage() {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const scrollTo = location.state?.scrollTo;
+        if (scrollTo) {
+            setTimeout(() => {
+                const el = document.getElementById(scrollTo);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
     return (
 
         <>
@@ -16,8 +32,8 @@ export function HomePage() {
             <AboutMe />
             <ArtisticManifesto />
             <Galery />
-            <Contact/>
-            <Footer/>
+            <Contact />
+            <Footer />
         </>
 
     )

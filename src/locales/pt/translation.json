@@ -23,6 +23,13 @@
     "title": "Vamos Conectar",
     "subtitle": "Para colaborações, exposições ou qualquer informação sobre meu trabalho.",
     "rights": "Todos os direitos reservados."
+  }, 
+
+  "gallery": {
+    "urbano": "Urbano",
+    "arte": "Arte",
+    "mosaico": "Mosáico",
+    "paisagem": "Paisagem"
   }
 
 }

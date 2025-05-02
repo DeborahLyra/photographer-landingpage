@@ -1,17 +1,9 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../supabaseClient'
-import { ImageEvent } from '../types'
+import { GaleryItem, ImageEvent } from '../types'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
-
-interface GaleryItem {
-    id: number
-    title: string
-    description: string
-    image: string
-    created_at: string
-}
 
 export function Galery() {
     const [items, setItems] = useState<GaleryItem[]>([])
@@ -19,7 +11,7 @@ export function Galery() {
     const navigate = useNavigate()
     const { t } = useTranslation()
 
-    const titles = ['Arte','Mosaico','Paisagem','Urbano']
+    const titles = ['Arte', 'Mosaico', 'Paisagem', 'Urbano']
 
     const handleContextMenu = (e: ImageEvent) => {
         e.preventDefault()
@@ -44,12 +36,10 @@ export function Galery() {
         fetchGalery()
     }, [])
 
-    const handleClickByIndex = (index: number) => {
-        const paths = ['arte', 'mosaico','paisagem', 'urbano']
-        const selectedPath = paths[index]
-        if (selectedPath) {
-            navigate(`/${selectedPath}`)
-        }
+    const handleClickByIndex = (photoType : string) => {
+
+        return navigate(`/galeria`, { state: { photoType } })
+
     }
 
     if (loading) return (
@@ -59,7 +49,7 @@ export function Galery() {
     )
 
     return (
-        <div className="min-h-screen py-20 px-8 md:px-16">
+        <div className="min-h-screen py-20 px-8 md:px-16" id='projects'>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -75,13 +65,13 @@ export function Galery() {
 
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 p-4">
                 {items.map((item, index) => (
-                    <motion.div 
+                    <motion.div
                         key={item.id}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         className="border rounded shadow-md p-3 hover:shadow-lg transition-shadow cursor-pointer"
-                        onClick={() => handleClickByIndex(index)}
+                        onClick={() => handleClickByIndex(item.description)}
                     >
                         <img
                             src={item.image}

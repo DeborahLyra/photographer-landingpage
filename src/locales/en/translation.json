@@ -23,6 +23,13 @@
     "title": "Let's Connect",
     "subtitle": "For collaborations, exhibitions or any inquiries about my work.",
     "rights": "All rights reserved."
+  },
+
+  "gallery": {
+    "urbano": "Urban",
+    "arte": "Art",
+    "mosaico": "Mosaic",
+    "paisagem": "Landscape"
   }
 
 }
