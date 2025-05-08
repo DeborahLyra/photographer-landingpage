@@ -110,7 +110,6 @@ export function GaleryPage() {
 
                 </button>
             )}
-
             <Footer />
         </div>
     );
