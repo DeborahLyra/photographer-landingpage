@@ -22,7 +22,7 @@ export function Galery() {
             const { data, error } = await supabase
                 .from('galery')
                 .select('*')
-                .in('id', ['88bf2d81-2706-4772-b048-52b27df3f5e5', '148f994a-511f-4b96-858c-790c8b2c10bc', '68dbc7e8-e2ea-4547-8f89-9e57bf08286f', 'bf7a61c5-0de6-4891-90ea-6ff15273aa23'])
+                .in('id', ['f64e8d61-32c2-4d00-9c74-c666576dafc3', 'b19298ae-e119-4ea7-a02a-9defb166e9d9', 'ec2b6243-9058-4b9c-8206-f53cbdce2deb', '76dc8526-3b1f-4dad-81e7-bcd301458992'])
                 .order('description', { ascending: true })
 
             if (error) {
