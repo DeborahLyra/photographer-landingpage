@@ -29,7 +29,8 @@
     "urbano": "Urban",
     "arte": "Art",
     "mosaico": "Mosaic",
-    "paisagem": "Landscape"
+    "paisagem": "Landscape",
+    "message": "Click on the image to get the code."
   }
 
 }

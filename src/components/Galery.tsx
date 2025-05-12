@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
-export function Galery() {
+export function Gallery() {
     const [items, setItems] = useState<GaleryItem[]>([])
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()

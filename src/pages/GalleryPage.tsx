@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import { GaleryItem, ImageEvent } from '../types';
 import { Navbar } from '../components/Navbar';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
 import {
@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowLeft, X } from 'phosphor-react';
 
-export function GaleryPage() {
+export function GalleryPage() {
     const location = useLocation();
     const navigate = useNavigate()
     const { photoType } = location.state || {};
@@ -20,6 +20,8 @@ export function GaleryPage() {
     const { t } = useTranslation();
     const [showScrollTop, setShowScrollTop] = useState(false);
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,7 +73,7 @@ export function GaleryPage() {
             <ArrowLeft
                 size={24}
                 className="mt-4 ml-4 cursor-pointer"
-                onClick={()=> navigate('/')}
+                onClick={() => navigate('/')}
             />
             <main className="min-h-screen py-8 px-4 md:px-16">
                 <motion.div
@@ -84,7 +86,9 @@ export function GaleryPage() {
                         {t(`gallery.${photoType}`)}
                     </h2>
                     <div className="w-24 h-1 bg-black mx-auto"></div>
+                    <p className="font-serif mt-8 text-lg">{t('gallery.message')}</p>
                 </motion.div>
+                
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     {items.map((item, index) => (
