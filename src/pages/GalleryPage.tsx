@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import { GaleryItem, ImageEvent } from '../types';
 import { Navbar } from '../components/Navbar';
-import { motion, useInView } from 'framer-motion';
+import { motion} from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
 import {
@@ -20,8 +20,6 @@ export function GalleryPage() {
     const { t } = useTranslation();
     const [showScrollTop, setShowScrollTop] = useState(false);
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     useEffect(() => {
         const handleScroll = () => {
