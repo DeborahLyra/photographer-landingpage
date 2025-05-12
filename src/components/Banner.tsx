@@ -24,7 +24,7 @@ export function Banner() {
                 <img 
                 src={image} 
                 alt="cidade de olinda e idoso" 
-                className="w-full h-[550px]"
+                className="w-full h-[350px] md:h-[550px]"
                 onContextMenu={handleContextMenu} 
                  />
             </div>

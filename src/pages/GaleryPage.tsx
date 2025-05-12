@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import { GaleryItem, ImageEvent } from '../types';
 import { Navbar } from '../components/Navbar';
@@ -9,10 +9,11 @@ import { Footer } from '../components/Footer';
 import {
     ChevronUpIcon
 } from '@heroicons/react/24/outline';
-import { X } from 'phosphor-react';
+import { ArrowLeft, X } from 'phosphor-react';
 
 export function GaleryPage() {
     const location = useLocation();
+    const navigate = useNavigate()
     const { photoType } = location.state || {};
     const [items, setItems] = useState<GaleryItem[]>([]);
     const [loading, setLoading] = useState(true);
@@ -67,8 +68,12 @@ export function GaleryPage() {
     return (
         <div className="bg-white text-gray-800">
             <Navbar />
-
-            <main className="min-h-screen py-20 px-4 md:px-16">
+            <ArrowLeft
+                size={24}
+                className="mt-4 ml-4 cursor-pointer"
+                onClick={()=> navigate('/')}
+            />
+            <main className="min-h-screen py-8 px-4 md:px-16">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -101,11 +106,11 @@ export function GaleryPage() {
                                 {activeIndex === index && (
                                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                                         <h2 className="text-white text-xl font-bold">{item.title}</h2>
-                                        <X 
-                                        size={24} 
-                                        color='white' 
-                                        className='absolute top-3 right-2'
-                                        onClick={()=>setActiveIndex(null)}
+                                        <X
+                                            size={24}
+                                            color='white'
+                                            className='absolute top-3 right-2'
+                                            onClick={() => setActiveIndex(null)}
                                         />
                                     </div>
                                 )}
