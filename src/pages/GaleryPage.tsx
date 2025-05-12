@@ -8,7 +8,8 @@ import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
 import {
     ChevronUpIcon
-  } from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline';
+import { X } from 'phosphor-react';
 
 export function GaleryPage() {
     const location = useLocation();
@@ -17,6 +18,7 @@ export function GaleryPage() {
     const [loading, setLoading] = useState(true);
     const { t } = useTranslation();
     const [showScrollTop, setShowScrollTop] = useState(false);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -87,16 +89,29 @@ export function GaleryPage() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                             className="rounded overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
+                            onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                         >
-                            <div className="overflow-hidden">
+                            <div className="relative overflow-hidden">
                                 <img
                                     src={item.image}
                                     alt={item.title}
                                     onContextMenu={handleContextMenu}
                                     className="w-full h-96 object-cover"
                                 />
+                                {activeIndex === index && (
+                                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                                        <h2 className="text-white text-xl font-bold">{item.title}</h2>
+                                        <X 
+                                        size={24} 
+                                        color='white' 
+                                        className='absolute top-3 right-2'
+                                        onClick={()=>setActiveIndex(null)}
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
+
                     ))}
                 </div>
             </main>
@@ -106,7 +121,7 @@ export function GaleryPage() {
                     className="fixed bottom-8 right-16 z-50 rounded-full text-black p-3 shadow-lg bg-[#f5f1e6]"
                     aria-label="Voltar ao topo"
                 >
-                   <ChevronUpIcon className="w-6 h-6" />
+                    <ChevronUpIcon className="w-6 h-6" />
 
                 </button>
             )}

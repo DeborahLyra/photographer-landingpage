@@ -36,7 +36,7 @@ export function Galery() {
         fetchGalery()
     }, [])
 
-    const handleClickByIndex = (photoType : string) => {
+    const handleClickByIndex = (photoType: string) => {
 
         return navigate(`/galeria`, { state: { photoType } })
 
