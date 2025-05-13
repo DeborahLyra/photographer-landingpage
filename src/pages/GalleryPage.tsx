@@ -80,11 +80,11 @@ export function GalleryPage() {
                     transition={{ duration: 1 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="font-serif uppercase text-4xl md:text-6xl tracking-wide mb-4">
+                    <h2 className="font-medium uppercase text-4xl md:text-6xl tracking-wide mb-4">
                         {t(`gallery.${photoType}`)}
                     </h2>
                     <div className="w-24 h-1 bg-black mx-auto"></div>
-                    <p className="font-serif mt-8 text-lg">{t('gallery.message')}</p>
+                    <p className="mt-8 text-lg">{t('gallery.message')}</p>
                 </motion.div>
                 
 
@@ -107,7 +107,7 @@ export function GalleryPage() {
                                 />
                                 {activeIndex === index && (
                                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                                        <h2 className="text-white text-xl font-bold">{item.title}</h2>
+                                        <h2 className="text-white text-xl font-medium">{item.title}</h2>
                                         <X
                                             size={24}
                                             color='white'

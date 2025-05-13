@@ -56,11 +56,11 @@ export function Gallery() {
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
-                <h2 className="font-serif text-4xl md:text-6xl mb-4 text-black">
+                <h2 className="font-medium text-4xl md:text-6xl mb-4 text-black">
                     {t('galery.title') || "Galeria"}
                 </h2>
                 <div className="w-24 h-1 bg-black mx-auto"></div>
-                <p className="font-serif mt-8 text-lg">{t('galery.subtitle')}</p>
+                <p className=" mt-8 text-lg">{t('galery.subtitle')}</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 p-4">
@@ -79,7 +79,7 @@ export function Gallery() {
                             className="w-full h-48 object-cover rounded"
                             onContextMenu={handleContextMenu}
                         />
-                        <h2 className="text-xl font-bold mt-2">{titles[index]}</h2>
+                        <h2 className="text-xl font-medium mt-2">{titles[index]}</h2>
                     </motion.div>
                 ))}
             </div>

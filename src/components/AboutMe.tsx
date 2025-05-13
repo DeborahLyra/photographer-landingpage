@@ -16,7 +16,7 @@ export function AboutMe() {
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
-                <h2 className="font-serif text-4xl md:text-6xl mb-4">
+                <h2 className="font-medium text-4xl md:text-6xl mb-4">
                     {t('aboutMe.title')}
                 </h2>
                 <div className="w-24 h-1 bg-black mx-auto"></div>

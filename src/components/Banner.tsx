@@ -11,7 +11,7 @@ export function Banner() {
         <>
             <div className="w-full flex justify-center items-center h-32 md:h-64">
                 <motion.h1
-                    className="font-serif font-medium text-4xl md:text-8xl text-center"
+                    className="font-medium text-4xl md:text-8xl text-center"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}

@@ -40,7 +40,7 @@ export function Contact() {
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
-                <h2 className="font-serif text-4xl md:text-6xl mb-4">
+                <h2 className="font-medium text-4xl md:text-6xl mb-4">
                     {t('contact.title')}
                 </h2>
                 <div className="w-24 h-1 bg-black mx-auto"></div>
@@ -48,7 +48,7 @@ export function Contact() {
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="font-serif mt-8 text-lg md:text-xl max-w-2xl mx-auto"
+                    className="mt-8 text-lg md:text-xl max-w-2xl mx-auto"
                 >
                     {t('contact.subtitle')}
                 </motion.p>
@@ -80,7 +80,7 @@ export function Contact() {
                                     className="mb-6 text-gray-800" 
                                     weight="duotone" 
                                 />
-                                <p className="font-serif text-lg text-center text-gray-800">
+                                <p className="text-lg text-center text-gray-800">
                                     {item.text}
                                 </p>
                             </motion.a>

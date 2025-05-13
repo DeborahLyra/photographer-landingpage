@@ -16,7 +16,9 @@
 
 * {
   font-size: 1em;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   transition: all .3s ease-in-out;
   scroll-behavior: smooth;
   box-sizing: border-box;

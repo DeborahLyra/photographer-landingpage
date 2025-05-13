@@ -26,10 +26,10 @@ export function Footer() {
             transition={{ duration: 1, delay: 0.3 }}
             className="mb-8 md:mb-0"
           >
-            <h3 className="font-serif text-2xl md:text-3xl mb-4">
+            <h3 className="font-medium text-2xl md:text-3xl mb-4">
               {t('footer.title')}
             </h3>
-            <p className="font-serif text-lg text-gray-700 max-w-md">
+            <p className="text-lg text-gray-700 max-w-md">
               {t('footer.subtitle')}
             </p>
           </motion.div>
@@ -55,7 +55,7 @@ export function Footer() {
                 </motion.a>
               ))}
             </div>
-            <p className="font-serif text-gray-600">
+            <p className="text-gray-600">
               © {new Date().getFullYear()} Marcus Prado. {t('footer.rights')}
             </p>
           </motion.div>
