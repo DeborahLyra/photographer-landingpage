@@ -70,7 +70,7 @@ export function GalleryPage() {
             <Navbar />
             <ArrowLeft
                 size={24}
-                className="mt-4 ml-4 cursor-pointer"
+                className="mt-4 ml-4 cursor-pointer hover:text-red-400"
                 onClick={() => navigate('/')}
             />
             <main className="min-h-screen py-8 px-4 md:px-16">
