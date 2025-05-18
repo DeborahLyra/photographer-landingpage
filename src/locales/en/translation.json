@@ -30,7 +30,9 @@
     "arte": "Art",
     "mosaico": "Mosaic",
     "paisagem": "Landscape",
-    "message": "Click on the image to get the code."
+    "message": "Click on the image to get the code.",
+    "button": "Load more",
+    "loadingMessage": "Loading..."
   }
 
 }

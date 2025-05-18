@@ -66,7 +66,7 @@ export function GalleryPage() {
     if (loading && items.length === 0) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-100">
-                <div className="animate-pulse text-xl text-gray-500">Carregando galeria...</div>
+                <div className="animate-pulse text-xl text-gray-500">{t('gallery.loadingMessage')}</div>
             </div>
         );
     }
@@ -137,7 +137,7 @@ export function GalleryPage() {
                             }}
                             className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
                         >
-                            Carregar mais
+                            {t('gallery.button')}
                         </button>
                     </div>
                 )}
