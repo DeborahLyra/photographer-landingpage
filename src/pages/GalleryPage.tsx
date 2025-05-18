@@ -3,23 +3,24 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import { GaleryItem, ImageEvent } from '../types';
 import { Navbar } from '../components/Navbar';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Footer } from '../components/Footer';
-import {
-    ChevronUpIcon
-} from '@heroicons/react/24/outline';
+import { ChevronUpIcon } from '@heroicons/react/24/outline';
 import { ArrowLeft, X } from 'phosphor-react';
 
 export function GalleryPage() {
     const location = useLocation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const { photoType } = location.state || {};
     const [items, setItems] = useState<GaleryItem[]>([]);
     const [loading, setLoading] = useState(true);
+    const [page, setPage] = useState(0);
+    const itemsPerPage = 5;
+    const [hasMore, setHasMore] = useState(true);
     const { t } = useTranslation();
     const [showScrollTop, setShowScrollTop] = useState(false);
-    const [activeIndex, setActiveIndex] = useState<number | null>(null)
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,30 +35,35 @@ export function GalleryPage() {
         e.preventDefault();
     };
 
+    const fetchGalery = async (currentPage: number) => {
+        const from = currentPage * itemsPerPage;
+        const to = from + itemsPerPage - 1;
+
+        const { data, error } = await supabase
+            .from('galery')
+            .select('*')
+            .eq('description', photoType)
+            .order('id', { ascending: true })
+            .range(from, to);
+
+        if (error) {
+            console.error('Erro ao buscar galeria:', error.message);
+        } else {
+            if (data.length < itemsPerPage) setHasMore(false);
+            setItems((prevItems) => [...prevItems, ...data as GaleryItem[]]);
+        }
+        setLoading(false);
+    };
+
     useEffect(() => {
-        const fetchGalery = async () => {
-            const { data, error } = await supabase
-                .from('galery')
-                .select('*')
-                .eq('description', photoType)
-                .order('description', { ascending: true });
-
-            if (error) {
-                console.error('Erro ao buscar galeria:', error.message);
-            } else {
-                setItems(data as GaleryItem[]);
-            }
-            setLoading(false);
-        };
-
-        fetchGalery();
+        fetchGalery(0);
     }, []);
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    if (loading) {
+    if (loading && items.length === 0) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-100">
                 <div className="animate-pulse text-xl text-gray-500">Carregando galeria...</div>
@@ -86,7 +92,6 @@ export function GalleryPage() {
                     <div className="w-24 h-1 bg-black mx-auto"></div>
                     <p className="mt-8 text-lg">{t('gallery.message')}</p>
                 </motion.div>
-                
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     {items.map((item, index) => (
@@ -110,18 +115,34 @@ export function GalleryPage() {
                                         <h2 className="text-white text-xl font-medium">{item.title}</h2>
                                         <X
                                             size={24}
-                                            color='white'
-                                            className='absolute top-3 right-2'
+                                            color="white"
+                                            className="absolute top-3 right-2 cursor-pointer"
                                             onClick={() => setActiveIndex(null)}
                                         />
                                     </div>
                                 )}
                             </div>
                         </motion.div>
-
                     ))}
                 </div>
+
+                {hasMore && (
+                    <div className="text-center mt-10">
+                        <button
+                            onClick={() => {
+                                setLoading(true);
+                                const nextPage = page + 1;
+                                setPage(nextPage);
+                                fetchGalery(nextPage);
+                            }}
+                            className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
+                        >
+                            Carregar mais
+                        </button>
+                    </div>
+                )}
             </main>
+
             {showScrollTop && (
                 <button
                     onClick={scrollToTop}
@@ -129,9 +150,9 @@ export function GalleryPage() {
                     aria-label="Voltar ao topo"
                 >
                     <ChevronUpIcon className="w-6 h-6" />
-
                 </button>
             )}
+
             <Footer />
         </div>
     );
