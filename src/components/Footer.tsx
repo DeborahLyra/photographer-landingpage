@@ -8,6 +8,12 @@ export function Footer() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
+  const links: Record<string, string> = {
+    whatsapp: "https://api.whatsapp.com/send?phone=5581997800250&text=Ol%C3%A1,%20gostaria%20de%20informações%20sobre%20as%20imagens%20do%20site%20",      // Altere para seu número real
+    email: "mailto:marcuspradoimprensa@gmail.com",             
+    instagram: "https://www.instagram.com/marcusprado.fotografia", 
+  };
+
   return (
     <div 
       ref={ref}
@@ -44,7 +50,9 @@ export function Footer() {
               {['whatsapp', 'email', 'instagram'].map((item, index) => (
                 <motion.a
                   key={item}
-                  href="#"
+                  href={links[item]}               
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.3 + index * 0.15 }}
