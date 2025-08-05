@@ -26,10 +26,7 @@
   },
 
   "gallery": {
-    "urbano": "Urban",
-    "arte": "Art",
-    "mosaico": "Mosaic",
-    "paisagem": "Landscape",
+    "title": "Gallery",
     "message": "Click on the image to get the code.",
     "button": "Load more",
     "loadingMessage": "Loading..."
